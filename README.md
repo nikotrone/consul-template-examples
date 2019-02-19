@@ -7,3 +7,14 @@ We also include a Dockerfile to run the code and print the output file. To run t
 ```docker build .```
 
 The Docker container downloads a compiled binary of consul-template, parses the template and cat the result to the command line
+
+## Command Line Arguments
+You can provide some arguments during the build process with the option `--build-arg`.
+The resulting build command should look something like this:
+```sh
+docker build --build-arg INPUT_FILE=remove_evaluated_lines .
+```
+
+The available options are:
+
+- `INPUT_FILE=remove_evaluated_lines`: specifies which input file to be compiled. Default test

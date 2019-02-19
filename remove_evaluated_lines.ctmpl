@@ -4,7 +4,6 @@
 # Note: by using this approach the result is elegant but you lose line consistency, which can be useful for debug.
 # "With great power comes great responsibility."
 
-{{ /* This is a comment line evaluated by consul-template */ -}}
 {{ $x := true -}}
 {{ if $x -}}
 The value of x is TRUE

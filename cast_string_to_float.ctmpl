@@ -1,0 +1,3 @@
+{{ $x := "512.0"  }}
+{{ $parsedX := parseFloat $x }}
+Evaluated x: {{ $parsedX }}

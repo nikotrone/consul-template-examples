@@ -1,4 +1,5 @@
 FROM hashicorp/consul-template:alpine
 COPY . .
-RUN consul-template -template "test.ctmpl:/tmp/test.conf" -once &&\
-cat /tmp/test.conf
+ARG INPUT_FILE=test.ctmpl
+RUN consul-template -template "${INPUT_FILE}.ctmpl:/tmp/${INPUT_FILE}.conf" -once &&\
+cat /tmp/${INPUT_FILE}.conf

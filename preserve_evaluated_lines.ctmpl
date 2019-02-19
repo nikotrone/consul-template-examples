@@ -1,0 +1,11 @@
+# This example shows how to evaluate an if condition over multiple lines while keeping the consul-template lines empty.
+# 
+# Imagine you have an application fed with the config file, if it errors will probably output the line that encountered an error. 
+# By removing the consul lines from the config file, we lose line consistency so it will be hard to track inside the template.
+
+{{ $x := true }}
+{{ if $x }}
+The value of x is TRUE
+{{ else }}
+The value of x is FALSE
+{{ end }}
