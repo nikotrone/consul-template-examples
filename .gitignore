@@ -1,0 +1,15 @@
+*.class
+*.log
+*.ipr
+*.iws
+
+.idea*
+
+# Sublime Text
+*.sublime-*
+
+# VIM
+*.swp
+
+# VS Code
+.DS_Store
