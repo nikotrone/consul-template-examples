@@ -1,0 +1,16 @@
+{{ $myString := "portnoy" -}}
+The input string is "portnoy"
+
+Is it containing the "port" substring?
+{{ if $myString | regexMatch "port" -}}
+yes 
+{{- else -}}
+no
+{{- end }}
+
+Is it containing the "annoy" substring?
+{{ if $myString | regexMatch "annoy" -}}
+yes 
+{{- else -}}
+no
+{{- end }}
